@@ -21,10 +21,20 @@
         margin: 0 auto 20px;
     }
 
+    .home:hover {
+        text-decoration: none;
+    }
+
     .site-title {
         font-family: $header-font;
         color: $grey-color;
         font-size: 2em;
+        border-bottom: 3px solid $brand-color;
+        transition: border-bottom 0.25s;
+
+        &:hover {
+            border-bottom: 3px solid rgba(54,54,54,1);
+        }
     }
 
     .site-subhead {
@@ -38,6 +48,7 @@
         a {
             color: white;
             text-decoration: none;
+            padding-bottom: 5px;
         }
 
         ul {
@@ -50,6 +61,16 @@
             font-weight: lighter;
             margin-bottom: 25px;
         }
+
+        span {
+            padding-bottom: 6px;
+            border-bottom: 2px solid $brand-color;
+            transition: border-bottom 0.5s ease;
+
+            &:hover {
+                border-bottom: 2px solid rgba(253,203,28,1);
+            }
+        }
     }
 }
 
@@ -57,22 +78,30 @@
  * Site footer
  */
 .site-footer {
-    height: 100px;
     background-color: $grey-color;
+    height: $footer-height;
 
     .wrapper {
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         text-align: center;
+        padding: 30px 0;
 
         p {
         font-family: $base-font-stack;
         color: $grey-color-light;
+        margin-bottom: 10px;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 0 10px;
         }
     }
 }
-
 
 /**
  * Page content
@@ -111,6 +140,14 @@
 /**
  * Posts
  */
+
+.post {
+    max-width: 800px;
+    min-height: calc(100vh - #{$footer-height});
+    margin: 0 auto;
+    padding: ($spacing-unit * 4) ($spacing-unit * 2);
+}
+
 .post-header {
     margin-bottom: $spacing-unit;
 }
@@ -144,6 +181,7 @@
 .homepage {
     .hero {
         height: 70vh;
+        min-height: 500px;
         background-image: url('../assets/img/hero.jpg');
         background-size: cover;
         padding: 0 60px;
@@ -188,6 +226,7 @@
                 text-align: center;
                 border: 2px solid white;
                 margin-top: 25px;
+                transition: background-color 0.5s;
 
                 &:hover {
                     color: $text-color;
@@ -196,7 +235,37 @@
                 }
             }
         }
+    }
 
-        
+    .latest-post {
+        background-color: $tertiary-color;
+
+        .content {
+            max-width: 800px;
+            min-height: calc(30vh - #{$footer-height});
+            padding: $spacing-unit ($spacing-unit * 2);
+            margin: 0 auto;
+
+            h2 {
+                font-size: 2em;
+                font-weight: 300;
+                color: white;
+            }
+
+            a {
+                font-size: 1.5em;
+                font-weight: 400;
+                color: $brand-color;
+            }
+
+            p {
+                margin-bottom: 0;
+                color: white;
+            }
+
+            .post-meta {
+                color: $secondary-color;
+            }
+        }
     }
 }

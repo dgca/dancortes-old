@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a href="{{ site.baseurl }}/"><img class="avatar" src="/assets/img/avatar.jpeg">
+    <a class="home" href="{{ site.baseurl }}/"><img class="avatar" src="/assets/img/avatar.jpeg">
     <span class="site-title">Dan Cortes</span></a>
     <p class="site-subhead">Digital Strategy,<br>Development &amp; Marketing</p>
 
@@ -11,7 +11,7 @@
       <ul>
         {% for page in nav_sorted %}
           {% if page.title %}
-            <a class="page-link" href="{{ page.url }}"><li>{{ page.title }}</li></a>
+            <a class="page-link" href="{{ page.url }}"><li><span>{{ page.title }}</span></li></a>
           {% endif %}
         {% endfor %}
       </ul>

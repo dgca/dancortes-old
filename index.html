@@ -13,17 +13,18 @@ layout: default
       <div class="contact-button"><a href="#">Reach Out</a></div>
     </div>
   </div>
-
-  <p>Hi, I'm Dan. I help bring digital products to life—from strategic product planning, to user-experience design, development, and marketing. I've helped launch products that are used by thousands of people every day.</p>
-
-  <p>Hi, I'm Dan. I help bring digital products to life—from strategic product planning, to user-experience design, development, and marketing. I've helped launch products that are used by thousands of people every day.</p>
-
-  <p>Hi, I'm Dan. I help bring digital products to life—from strategic product planning, to user-experience design, development, and marketing. I've helped launch products that are used by thousands of people every day.</p>
-
-  <p>Hi, I'm Dan. I help bring digital products to life—from strategic product planning, to user-experience design, development, and marketing. I've helped launch products that are used by thousands of people every day.</p>
-
-  <p>Hi, I'm Dan. I help bring digital products to life—from strategic product planning, to user-experience design, development, and marketing. I've helped launch products that are used by thousands of people every day.</p>
-
-  <p>Hi, I'm Dan. I help bring digital products to life—from strategic product planning, to user-experience design, development, and marketing. I've helped launch products that are used by thousands of people every day.</p>
-
+  <div class="latest-post">
+    <div class="content">
+      <h2>Latest Post:</h2>
+      <ul class="post-list">
+      {% for post in site.posts limit:1 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <p>{{ post.excerpt }}</p>
+          <span class="post-meta">{{ post.date | date_to_string }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>

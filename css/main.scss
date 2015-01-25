@@ -13,6 +13,7 @@ $base-line-height: 1.5;
 
 $header-width: 350px;
 $content-width: calc(100% - 350px);
+$footer-height: 120px;
 
 $spacing-unit:     30px;
 
@@ -20,6 +21,7 @@ $text-color:       #111111;
 $background-color: #fdfdfd;
 $brand-color:      #029CB8;
 $secondary-color:  #fdcb1c;
+$tertiary-color:   #010112;
 
 $grey-color:       #363636;
 $grey-color-light: lighten($grey-color, 40%);

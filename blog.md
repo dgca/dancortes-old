@@ -5,8 +5,6 @@ permalink: /blog/
 weight: 1
 ---
 
-This is where the blog feed is.
-
 <ul class="post-list">
   {% for post in site.posts %}
     <li>
