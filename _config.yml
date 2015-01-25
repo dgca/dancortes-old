@@ -13,3 +13,11 @@ github_username:  dgca
 # Build settings
 markdown: kramdown
 highlighter: pygments
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      avatar: /assets/img/avatar.jpeg
