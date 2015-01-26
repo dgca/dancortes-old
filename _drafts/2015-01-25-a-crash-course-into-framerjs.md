@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A crash course into Framer.js"
-date:   2015-01-25 12:00:00
+date:   2015-01-25
 categories: testing
 excerpt: Let's take a look at Framer.js, and how you can use it to create interactive mockups.
 ---

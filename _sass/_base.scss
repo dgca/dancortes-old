@@ -66,6 +66,8 @@ ul, ol {
 }
 
 li {
+    font-family: $paragraph-font-stack;
+
     > ul,
     > ol {
          margin-bottom: 0;
@@ -163,6 +165,45 @@ pre {
 
         path {
             fill: $grey-color;
+        }
+    }
+}
+
+/**
+ * Forms
+**/
+
+form {
+    max-width: 550px;
+    margin: 0 auto;
+    @extend %clearfix;
+
+    label {
+        font-weight: bold;
+    }
+
+    input, textarea {
+        display:block;
+        width: 100%;
+        font-size: 1em;
+        font-weight: 300;
+        padding: 5px 10px;
+        margin-bottom: 15px;
+    }
+
+    input[type=submit] {
+        width: 135px;
+        height: 50px;
+        float: right;
+        color: white;
+        background-color: $brand-color;
+        border: none;
+        cursor: pointer;
+        transition: 0.25s ease;
+
+        &:hover {
+            color: $secondary-color;
+            background-color: $tertiary-color;
         }
     }
 }

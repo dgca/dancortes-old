@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How I built this website, from start to finish"
-date:   2015-01-17 12:00:00
+date:   2015-01-17
 categories: 
 excerpt: From site setup, to wireframes, to design, and coding—this is how this website came to be.
 ---

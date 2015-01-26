@@ -10,8 +10,11 @@
     text-align: center;
     background-color: $brand-color;
 
-    .wrapper {
-        padding: 10vh 10% 0;
+    .header-wrapper {
+        position: relative;
+        padding: 0 10%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .avatar {
@@ -81,7 +84,7 @@
     background-color: $grey-color;
     height: $footer-height;
 
-    .wrapper {
+    .footer-wrapper {
         position: relative;
         text-align: center;
         padding: 30px 0;
@@ -99,6 +102,7 @@
         li {
             display: inline;
             margin: 0 10px;
+            font-family: $base-font-stack;
         }
 
         a {
@@ -110,10 +114,20 @@
 /**
  * Page content
  */
+body {
+    background-color: $tertiary-color;
+}
+
 .page-content {
     padding: 0;
     width: $content-width;
     float: right;
+
+    .wrapper {
+        margin: 5px;
+        background-color: $background-color;
+        border: 5px solid $secondary-color;
+    }
 }
 
 .page-heading {
@@ -126,6 +140,20 @@
 
     > li {
         margin-bottom: $spacing-unit;
+
+        a {
+            color: $brand-color;
+            font-size: 1.5em;
+            font-weight: 400;
+
+            &:visited {
+                color: #9603C0;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -147,9 +175,9 @@
 
 .post {
     max-width: 800px;
-    min-height: calc(100vh - #{$footer-height});
+    min-height: calc(100vh - #{$footer-height} - 20px);
     margin: 0 auto;
-    padding: ($spacing-unit * 4) ($spacing-unit * 2);
+    padding: ($spacing-unit * 4) ($spacing-unit * 2) ($spacing-unit * 2);
 }
 
 .post-header {
@@ -220,7 +248,7 @@
                 line-height: 2;
             }
 
-            .contact-button a {
+            a#reach-out {
                 display: block;
                 margin: 0 auto;
                 width: 200px;
@@ -270,6 +298,38 @@
             .post-meta {
                 color: $secondary-color;
             }
+        }
+    }
+
+    #homepage-contact-form {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: $content-width;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.9);
+        z-index: $z-max;
+
+        form {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        label, p, h2, a {
+            color: white;
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+
+        #reach-out-dismiss {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
 }
