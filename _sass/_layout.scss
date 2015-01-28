@@ -14,7 +14,8 @@
         position: relative;
         padding: 0 10%;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
     }
 
     .avatar {
@@ -30,13 +31,13 @@
 
     .site-title {
         font-family: $header-font;
-        color: $grey-color;
+        color: $tertiary-color;
         font-size: 2em;
         border-bottom: 3px solid $brand-color;
         transition: border-bottom 0.25s;
 
         &:hover {
-            border-bottom: 3px solid rgba(54,54,54,1);
+            border-bottom: 3px solid $tertiary-color;
         }
     }
 
@@ -114,9 +115,6 @@
 /**
  * Page content
  */
-body {
-    background-color: $tertiary-color;
-}
 
 .page-content {
     padding: 0;
@@ -124,9 +122,8 @@ body {
     float: right;
 
     .wrapper {
-        margin: 5px;
         background-color: $background-color;
-        border: 5px solid $secondary-color;
+        border: 5px solid $tertiary-color;
     }
 }
 
@@ -175,7 +172,7 @@ body {
 
 .post {
     max-width: 800px;
-    min-height: calc(100vh - #{$footer-height} - 20px);
+    min-height: calc(100vh - #{$footer-height} - 10px);
     margin: 0 auto;
     padding: ($spacing-unit * 4) ($spacing-unit * 2) ($spacing-unit * 2);
 }
@@ -188,6 +185,7 @@ body {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+    font-weight: 400;
 }
 
 .post-content {
@@ -212,7 +210,7 @@ body {
  */
 .homepage {
     .hero {
-        height: 70vh;
+        height: 100vh;
         min-height: 500px;
         background-image: url('../assets/img/hero.jpg');
         background-size: cover;
@@ -234,13 +232,15 @@ body {
             margin: 0 auto;
             position: relative;
             top: 50%;
-            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
 
             .page-heading {
             color: $secondary-color;
             font-size: 4em;
             font-weight: bold;
             line-height: 1.2;
+            margin-bottom: 25px;
             }
 
             p {
@@ -250,14 +250,13 @@ body {
 
             a#reach-out {
                 display: block;
-                margin: 0 auto;
+                margin: 25px auto;
                 width: 200px;
                 height: 50px;
                 line-height: 48px;
                 color: white;
                 text-align: center;
                 border: 2px solid white;
-                margin-top: 25px;
                 transition: background-color 0.5s;
 
                 &:hover {
@@ -314,7 +313,8 @@ body {
         form {
             position: relative;
             top: 50%;
-            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
         }
 
         label, p, h2, a {
