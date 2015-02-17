@@ -10,8 +10,12 @@
     text-align: center;
     background-color: $brand-color;
 
-    .wrapper {
-        padding: 10vh 10% 0;
+    .header-wrapper {
+        position: relative;
+        padding: 0 10%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
     }
 
     .avatar {
@@ -27,13 +31,13 @@
 
     .site-title {
         font-family: $header-font;
-        color: $grey-color;
+        color: $tertiary-color;
         font-size: 2em;
         border-bottom: 3px solid $brand-color;
         transition: border-bottom 0.25s;
 
         &:hover {
-            border-bottom: 3px solid rgba(54,54,54,1);
+            border-bottom: 3px solid $tertiary-color;
         }
     }
 
@@ -81,7 +85,7 @@
     background-color: $grey-color;
     height: $footer-height;
 
-    .wrapper {
+    .footer-wrapper {
         position: relative;
         text-align: center;
         padding: 30px 0;
@@ -99,6 +103,7 @@
         li {
             display: inline;
             margin: 0 10px;
+            font-family: $base-font-stack;
         }
 
         a {
@@ -110,10 +115,16 @@
 /**
  * Page content
  */
+
 .page-content {
     padding: 0;
     width: $content-width;
     float: right;
+
+    .wrapper {
+        background-color: $background-color;
+        border: 5px solid $tertiary-color;
+    }
 }
 
 .page-heading {
@@ -126,6 +137,20 @@
 
     > li {
         margin-bottom: $spacing-unit;
+
+        a {
+            color: $brand-color;
+            font-size: 1.5em;
+            font-weight: 400;
+
+            &:visited {
+                color: #9603C0;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -147,9 +172,9 @@
 
 .post {
     max-width: 800px;
-    min-height: calc(100vh - #{$footer-height});
+    min-height: calc(100vh - #{$footer-height} - 10px);
     margin: 0 auto;
-    padding: ($spacing-unit * 4) ($spacing-unit * 2);
+    padding: ($spacing-unit * 4) ($spacing-unit * 2) ($spacing-unit * 2);
 }
 
 .post-header {
@@ -160,6 +185,7 @@
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+    font-weight: 400;
 }
 
 .post-content {
@@ -184,7 +210,7 @@
  */
 .homepage {
     .hero {
-        height: 70vh;
+        height: 100vh;
         min-height: 500px;
         background-image: url('../assets/img/hero.jpg');
         background-size: cover;
@@ -206,13 +232,15 @@
             margin: 0 auto;
             position: relative;
             top: 50%;
-            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
 
             .page-heading {
             color: $secondary-color;
             font-size: 4em;
             font-weight: bold;
             line-height: 1.2;
+            margin-bottom: 25px;
             }
 
             p {
@@ -220,16 +248,15 @@
                 line-height: 2;
             }
 
-            .contact-button a {
+            a#reach-out {
                 display: block;
-                margin: 0 auto;
+                margin: 25px auto;
                 width: 200px;
                 height: 50px;
                 line-height: 48px;
                 color: white;
                 text-align: center;
                 border: 2px solid white;
-                margin-top: 25px;
                 transition: background-color 0.5s;
 
                 &:hover {
@@ -270,6 +297,39 @@
             .post-meta {
                 color: $secondary-color;
             }
+        }
+    }
+
+    #homepage-contact-form {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: $content-width;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.9);
+        z-index: $z-max;
+
+        form {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+
+        label, p, h2, a {
+            color: white;
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+
+        #reach-out-dismiss {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
 }

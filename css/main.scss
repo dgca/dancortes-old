@@ -12,7 +12,7 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $header-width: 350px;
-$content-width: calc(100% - 350px);
+$content-width: calc(100% - #{$header-width});
 $footer-height: 120px;
 
 $spacing-unit:     30px;
@@ -22,6 +22,11 @@ $background-color: #fdfdfd;
 $brand-color:      #029CB8;
 $secondary-color:  #fdcb1c;
 $tertiary-color:   #010112;
+
+// z-index variables
+$z-max: 9999;
+$z-mid: 9999;
+$z-min: 9999;
 
 $grey-color:       #363636;
 $grey-color-light: lighten($grey-color, 40%);

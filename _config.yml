@@ -21,3 +21,4 @@ defaults:
       path: ""
     values:
       avatar: /assets/img/avatar.jpeg
+      favicon: /assets/img/favicon.ico
