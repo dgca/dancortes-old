@@ -23,6 +23,10 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+
+    @media (max-width: $mobile) {
+        font-size: $small-font-size;
+    }
 }
 
 p {
@@ -47,7 +51,12 @@ img {
 }
 
 .img-block {
-    margin-bottom: 25px;
+    display: block;
+    margin-bottom: 45px;
+
+    @media (max-width: $mobile) {
+        margin-bottom: 25px;
+    }
 }
 
 .img-circle {
@@ -100,7 +109,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: #9603C0;
     }
 
     &:hover {

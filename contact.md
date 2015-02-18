@@ -7,7 +7,7 @@ weight: 4
 
 Want to chat? If you're the informal type, shoot me a message on twitter [@ddggccaa](https://twitter.com/ddggccaa).
 
-For freelance opportunities, shoot me an email at <a href="mailto:contact@dancort.es">contact@dancort.es</a>, or fill out the form below.
+For freelance opportunities, email ne at <a href="mailto:contact@dancort.es">contact@dancort.es</a>, or fill out the form below.
 
 <div class="form">
   <form action="https://getsimpleform.com/messages?form_api_token=b2f151d0622f0776b9e2ef91afa6458a" method="post">

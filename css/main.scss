@@ -9,15 +9,21 @@ $header-font: 'Montserrat', Helvetica, Arial, sans-serif;
 $paragraph-font-stack: 'Merriweather', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
+
+$tablet: 900px;
+$mobile: 500px;
 
 $header-width: 350px;
 $content-width: calc(100% - #{$header-width});
 $footer-height: 120px;
 
+$ham-height-tablet: 60px;
+$ham-height-mobile: 48px;
+
 $spacing-unit:     30px;
 
-$text-color:       #111111;
+$text-color:       #222222;
 $background-color: #fdfdfd;
 $brand-color:      #029CB8;
 $secondary-color:  #fdcb1c;
@@ -25,8 +31,8 @@ $tertiary-color:   #010112;
 
 // z-index variables
 $z-max: 9999;
-$z-mid: 9999;
-$z-min: 9999;
+$z-mid: 4999;
+$z-min: 1;
 
 $grey-color:       #363636;
 $grey-color-light: lighten($grey-color, 40%);

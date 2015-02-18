@@ -1,6 +1,101 @@
 /**
  * Site header
  */
+
+// I should make some variables for this header nonsense.
+
+.ham-box {
+    position:fixed;
+    height: $ham-height-tablet;
+    width: 100%;
+    background-color: $brand-color;
+    transition: 0.5s;
+    z-index: $z-mid;
+    display: none;
+
+    &.ham-home {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+
+    @media (max-width: $mobile) {
+        height: $ham-height-mobile;
+    }
+}
+
+.hammy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    margin: 12px 8px;
+    z-index: $z-max;
+    display: none;
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+
+    @media (max-width: $mobile) {
+        width: 30px;
+        height: 30px;
+        margin: 9px;
+    }
+
+    .ham-line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+
+    .ham-1 {
+        opacity: 1;
+        transition: 0.5s;
+
+        &.active{
+            opacity: 0;
+        }
+    }
+
+    .ham-2, .ham-2x {
+        top: 17px;
+
+        @media (max-width: $mobile) {
+            top: 14px;
+        }
+    }
+
+    .ham-2 {
+        transition: 0.5s;
+
+        &.active {
+            transform: rotate(45deg);
+        }
+    }
+
+    .ham-2x {
+        transition: 0.5s;
+
+        &.active {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .ham-3 {
+        bottom: 0;
+        transition: 0.5s;
+
+        &.active {
+            opacity: 0;
+        }
+    }
+}
+
 .site-header {
     position: fixed;
     width: $header-width;
@@ -10,9 +105,15 @@
     text-align: center;
     background-color: $brand-color;
 
+    @media (max-width: $tablet) {
+        position: fixed;
+        width: 100%;
+        z-index: $z-mid;
+        display: none;
+    }
+
     .header-wrapper {
         position: relative;
-        padding: 0 10%;
         top: 50%;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
@@ -21,8 +122,13 @@
     .avatar {
         border-radius: 50%;
         width: 80%;
+        max-width: 200px;
         display: block;
         margin: 0 auto 20px;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
     }
 
     .home:hover {
@@ -47,7 +153,7 @@
     }
 
     .site-nav {
-        padding: 40px 0;
+        padding-top: 20px;
 
         a {
             color: white;
@@ -83,7 +189,6 @@
  */
 .site-footer {
     background-color: $grey-color;
-    height: $footer-height;
 
     .footer-wrapper {
         position: relative;
@@ -121,9 +226,22 @@
     width: $content-width;
     float: right;
 
+    @media (max-width: $tablet) {
+        width: 100%;
+        margin-top: $ham-height-tablet; // ham-box margin
+    }
+
+    @media (max-width: $mobile) {
+        margin-top: $ham-height-mobile; // ham-box margin
+    }
+
     .wrapper {
         background-color: $background-color;
         border: 5px solid $tertiary-color;
+
+        @media (max-width: $tablet) {
+            border: none;
+        }
     }
 }
 
@@ -139,13 +257,8 @@
         margin-bottom: $spacing-unit;
 
         a {
-            color: $brand-color;
             font-size: 1.5em;
             font-weight: 400;
-
-            &:visited {
-                color: #9603C0;
-            }
         }
 
         p {
@@ -175,6 +288,21 @@
     min-height: calc(100vh - #{$footer-height} - 10px);
     margin: 0 auto;
     padding: ($spacing-unit * 4) ($spacing-unit * 2) ($spacing-unit * 2);
+
+    @media (max-width: $tablet) {
+        padding: ($spacing-unit * 3) ($spacing-unit * 2) ($spacing-unit * 2);
+        min-height: calc(100vh - #{$footer-height} - #{$ham-height-tablet});
+    }
+
+    @media (max-width: $mobile) {
+        padding: ($spacing-unit * 2) ($spacing-unit * 1) ($spacing-unit * 2);
+        min-height: calc(100vh - #{$footer-height} - #{$ham-height-mobile});
+    }
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
 }
 
 .post-header {
@@ -186,6 +314,10 @@
     letter-spacing: -1px;
     line-height: 1;
     font-weight: 400;
+
+    @media (max-width: $mobile) {
+        font-size: 2.5em;
+    }
 }
 
 .post-content {
@@ -208,6 +340,13 @@
 /**
  * Homepage
  */
+
+ // Remove margin-top that normally accounts for the ham-box;
+
+.homepage-content {
+    margin: 0;
+}
+
 .homepage {
     .hero {
         height: 100vh;
@@ -216,6 +355,10 @@
         background-size: cover;
         padding: 0 60px;
         position: relative;
+
+        @media (max-width: $mobile) {
+            padding: 60px 30px 0;
+        }
 
         &:before {
             content: "";
@@ -235,22 +378,36 @@
             -webkit-transform: translateY(-50%);
                     transform: translateY(-50%);
 
+            // @media (max-width: $tablet) {
+            //     top: 0;
+            //     -webkit-transform: none;
+            //             transform: none;
+            // }
+
             .page-heading {
             color: $secondary-color;
             font-size: 4em;
             font-weight: bold;
             line-height: 1.2;
             margin-bottom: 25px;
+
+                @media (max-width: $mobile) {
+                    font-size: 1.8em;
+                }
             }
 
             p {
                 color: white;
                 line-height: 2;
+
+                @media (max-width: $mobile) {
+                    font-size: 14px;
+                }
             }
 
             a#reach-out {
                 display: block;
-                margin: 25px auto;
+                margin: 45px auto;
                 width: 200px;
                 height: 50px;
                 line-height: 48px;
