@@ -74,7 +74,8 @@
         transition: 0.5s;
 
         &.active {
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
         }
     }
 
@@ -82,7 +83,8 @@
         transition: 0.5s;
 
         &.active {
-            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
         }
     }
 
@@ -385,11 +387,11 @@
             // }
 
             .page-heading {
-            color: $secondary-color;
-            font-size: 4em;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 25px;
+                color: $secondary-color;
+                font-size: 4em;
+                font-weight: bold;
+                line-height: 1.2;
+                margin-bottom: 25px;
 
                 @media (max-width: $mobile) {
                     font-size: 1.8em;
@@ -434,6 +436,11 @@
             padding: $spacing-unit ($spacing-unit * 2);
             margin: 0 auto;
 
+            @media (max-width: $mobile) {
+                padding: $spacing-unit $spacing-unit;
+            }
+
+
             h2 {
                 font-size: 2em;
                 font-weight: 300;
@@ -467,19 +474,39 @@
         background-color: rgba(0,0,0,0.9);
         z-index: $z-max;
 
+        @media (max-width: $tablet) {
+            padding: 0 20px;
+            width: 100%;
+            max-width: 100%;
+        }
+
         form {
             position: relative;
             top: 50%;
             -webkit-transform: translateY(-50%);
                     transform: translateY(-50%);
-        }
 
-        label, p, h2, a {
-            color: white;
+            // @media (max-width: $tablet) {
+            //     top: auto;
+            //     -webkit-transform: none;
+            //             transform: none;
+            // }
         }
 
         h2 {
             font-size: 3em;
+
+            @media (max-width: $mobile) {
+                margin-top: 0;
+            }
+        }
+
+        label, p, h2, a {
+            color: white;
+
+            @media (max-width: $tablet) {
+                font-size: $small-font-size;
+            }
         }
 
         #reach-out-dismiss {

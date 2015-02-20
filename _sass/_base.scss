@@ -52,9 +52,11 @@ img {
 
 .img-block {
     display: block;
-    margin-bottom: 45px;
+    padding: 20px;
+    margin-bottom: 35px;
 
     @media (max-width: $mobile) {
+        padding: 0px;
         margin-bottom: 25px;
     }
 }
@@ -163,7 +165,7 @@ pre {
 /**
  * Clearfix
  */
-%clearfix {
+.clearfix, %clearfix {
 
     &:after {
         content: "";
@@ -225,5 +227,46 @@ form {
             color: $secondary-color;
             background-color: $tertiary-color;
         }
+    }
+}
+
+/**
+ * Two-up lists
+**/
+
+.two-up-list {
+    .list-left {
+        width: calc(50% - 30px);
+        float: left;
+
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin-bottom: 0;
+            float: none;
+        }
+    }
+
+    .list-right {
+        width: calc(50% - 30px);
+        float: right;
+
+        @media (max-width: $mobile) {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
+/**
+ * Text styles
+ **/
+
+ .love {
+    color: crimson;
+ }
+
+ @media (max-width: $mobile) {
+    .rwd-line {
+        display: block;
     }
 }
