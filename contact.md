@@ -12,7 +12,7 @@ For freelance opportunities, email ne at <a href="mailto:contact@dancort.es">con
 <div class="form">
   <form action="https://getsimpleform.com/messages?form_api_token=b2f151d0622f0776b9e2ef91afa6458a" method="post">
     <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-    <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+    <input type='hidden' name='redirect_to' value='http://dancort.es/you-rock/' />
     <!-- all your input fields here.... -->
     <label>Name:</label>
     <input type='text' name='name' placeholder='e.g. Jane Smith'/>

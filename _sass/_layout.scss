@@ -9,6 +9,7 @@
     height: $ham-height-tablet;
     width: 100%;
     background-color: $brand-color;
+    text-align: center;
     transition: 0.5s;
     z-index: $z-mid;
     display: none;
@@ -17,8 +18,16 @@
         background-color: rgba(0, 0, 0, 0.8);
     }
 
+    h2 {
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
+        color: #029CB8;
+        margin: 0;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
     @media (max-width: $tablet) {
-        display: block;
+        display: table;
     }
 
     @media (max-width: $mobile) {
@@ -480,17 +489,17 @@
             max-width: 100%;
         }
 
+        @media (max-width: $mobile) {
+            p {
+                display: none;
+            }
+        }
+
         form {
             position: relative;
             top: 50%;
             -webkit-transform: translateY(-50%);
                     transform: translateY(-50%);
-
-            // @media (max-width: $tablet) {
-            //     top: auto;
-            //     -webkit-transform: none;
-            //             transform: none;
-            // }
         }
 
         h2 {

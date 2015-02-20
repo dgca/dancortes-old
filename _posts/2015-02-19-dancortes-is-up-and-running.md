@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "dancort.es is up and running"
-date:   2015-02-18
+date:   2015-02-19
 categories: meta
-heroimage: http://www.fillmurray.com/500/200
+heroimage: 
 excerpt: Hey, welcome to my new website! There are tons of things I want to learn and write about in the near future. Stay tuned.
 ---
 
@@ -17,4 +17,4 @@ Among them are user experience design, prototyping, front-end development, marke
 
 The first post will be about how this site came to be. I made it using [Jekyll](http://jekyllrb.com/), a great tool for building build blog-aware static sites. Jekyll is only one piece of the puzzle, though. We'll talk about the rest of the process—from getting a domain, to hosting, to mocking up the site, design inspiration, to building the site, and getting it up on the internet.
 
-If you're new to web design, and you're interested in what putting together a relatively simple website looks like, it'll be worth your time.
+If you're new to web design, and you're interested in what putting together a relatively simple website looks like, it'll be worth your time. Stay tuned.
