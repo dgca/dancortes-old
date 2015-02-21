@@ -259,7 +259,7 @@ form {
 
 /**
  * Text styles
- **/
+**/
 
  .love {
     color: crimson;
@@ -269,4 +269,36 @@ form {
     .rwd-line {
         display: block;
     }
+}
+
+/**
+ * Image position
+**/
+
+ .centered {
+    display: block;
+    margin: 0 auto;
+ }
+
+ /**
+  * Forced margin
+**/
+.top-margin-10 {
+    margin-top: 10px !important;
+}
+
+.top-margin-20 {
+    margin-top: 20px !important;
+}
+
+.top-margin-30 {
+    margin-top: 30px !important;
+}
+
+.top-margin-40 {
+    margin-top: 40px !important;
+}
+
+.top-margin-50 {
+    margin-top: 50px !important;
 }
