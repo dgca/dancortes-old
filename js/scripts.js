@@ -4,12 +4,12 @@ $(document).ready(function(){
 
   $('#reach-out').click(function(){
     $(contactForm).fadeToggle();
-    var active = true;
+    $('body').toggleClass('scroll-lock');
   });
 
   $('#reach-out-dismiss').click(function(){
     $(contactForm).fadeToggle();
-    var active = false;
+    $('body').toggleClass('scroll-lock');
   });
   
   // HAMMY MENU

@@ -352,10 +352,16 @@
  * Homepage
  */
 
- // Remove margin-top that normally accounts for the ham-box;
+// Remove margin-top that normally accounts for the ham-box;
 
 .homepage-content {
     margin: 0;
+}
+
+// Add class to body that will lock scrolling when the contact form is open
+
+.scroll-lock {
+    overflow: hidden;
 }
 
 .homepage {
