@@ -19,30 +19,8 @@ It also added frames for the iPhone 6, iPhone 6 Plus, and Apple Watch. Since the
 
 Here's a sneak peek at where I am so far. The idea is to make the whole thing loop so you don't have to stop and re-run the composition every time you want to see the notification. I'm not quite there yet.
 
-<div class="videoframe">
-<iframe src="http://gfycat.com/ifr/UnlawfulUnimportantAnkolewatusi" frameborder="0" scrolling="no" width="544" height="430" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
-</div>
+<img class="img-block" src="/assets/img/dan-app-mockup-preview.gif">
 
 I've got the source files up on [Github](https://github.com/dgca/origami-apple-watch-mockup), in case you want to play around and see how it works.
 
 So if you're interested creating Apple Watch mockups, stay tuned. The full write-up will be coming shortly.
-
-<style type="text/css">
-    @media (max-width: 500px) {
-        .videoframe {
-            position: relative;
-            padding-bottom: 65%;
-            padding-top: 35px;
-            height: 0;
-            overflow: hidden;
-        }
-
-        .videoframe iframe, .gfyVidIframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        }
-    }
-</style>

@@ -53,7 +53,7 @@ img {
 .img-block {
     display: block;
     padding: 20px;
-    margin-bottom: 35px;
+    margin: 0 auto 35px;
 
     @media (max-width: $mobile) {
         padding: 0px;
