@@ -43,6 +43,13 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+hr {
+    margin: 25px;
+    height: 1px;
+    border: none;
+    border-top: 1px #029CB8 dashed;
+}
+
 /**
  * Images
  */
@@ -53,7 +60,7 @@ img {
 .img-block {
     display: block;
     padding: 20px;
-    margin: 0 auto 35px;
+    margin: 0 auto;
 
     @media (max-width: $mobile) {
         padding: 0px;
@@ -68,12 +75,19 @@ img {
 /**
  * Figures
  */
+figure {
+    text-align: center;
+}
+
 figure > img {
     display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 figcaption {
     font-size: $small-font-size;
+    text-align: center;
 }
 
 /**
