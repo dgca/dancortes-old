@@ -7,7 +7,7 @@ heroimage: /assets/img/watch_hero.jpg
 excerpt:    Smartwatches won't change the world, but they'll change how you interact with your phone and they might give you a bit of your life back.
 ---
 
-Smartwatches. Somehow they're a new thing, even though they've been around for a while now. To be fair, the Apple Watch will definitely bring a mostly-techie technology into the mainstream. Hooray, Android Wear and Pebble owners, we're about to be 'not weird' anymore.
+Smartwatches. Somehow they're a new thing, even though they've been around for a while. To be fair, the Apple Watch will definitely bring a mostly-techie technology into the mainstream. Hooray, Android Wear and Pebble owners, we're about to be 'not weird' anymore.
 
 So, if you decide to get a smartwatch, how will you be affected?
 
