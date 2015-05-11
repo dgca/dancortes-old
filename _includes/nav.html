@@ -7,15 +7,15 @@
 </div>
 
 
-<header class="site-header">
+<nav class="site-nav">
 
-  <div class="header-wrapper">
+  <div class="nav-wrapper">
 
     <a class="home" href="{{ site.baseurl }}/"><img class="avatar" src="/assets/img/pixeldan_bg_blinking.gif">
     <span class="site-title">Dan Cortes</span></a>
     <p class="site-subhead">Digital Strategy,<br>Design &amp; Development</p>
 
-    <nav class="site-nav">
+    <nav class="nav-list">
       {% assign nav_sorted = (site.pages | sort: 'weight') %}
       <ul>
         {% for page in nav_sorted %}
@@ -28,4 +28,4 @@
 
   </div>
 
-</header>
+</nav>

@@ -14,7 +14,3 @@ First, introductions. I'm Dan, and I currently work as a digital strategist at [
 As a strategist, my job is to come up with solutions to our clients' needs, and to work with the team to see the execution through—from design, to development, launch, and promotion. Given the breadth of the role, I've picked up a few different skills that have turned into major hobbies.
 
 Among them are user experience design, prototyping, front-end development, marketing, and animation. This blog is where I'll be writing about them.
-
-The first post will be about how this site came to be. I made it using [Jekyll](http://jekyllrb.com/), a great tool for building build blog-aware static sites. Jekyll is only one piece of the puzzle, though. We'll talk about the rest of the process—from getting a domain, to hosting, to mocking up the site, design inspiration, to building the site, and getting it up on the internet.
-
-If you're new to web design, and you're interested in what putting together a relatively simple website looks like, it'll be worth your time. Stay tuned.
