@@ -9,7 +9,7 @@ excerpt:    In this post, we'll go through the process of creating an interactiv
 
 Recently, I've been working on a site that uses a CMS that's a bit limiting. I can add my own HTML and CSS to the site, but JavaScript is off-limits.
 
-The designs I'm working from included a carousel. I had some ideas of how I could make that work using CSS animations and the transform property, but that would leave me with a carousel that scrolled automatically and didn't allow for user input which wasn't really what I was looking. After some thinking, I eneded up with a solution that uses absolute positioning and the *:target* pseudo-selector to change the *z-index* and *opacity* of our carousel items to cycle through them. It looks something like this:
+The designs I'm working from included a carousel. I had some ideas of how I could make that work using CSS animations and the transform property, but that would leave me with a carousel that scrolled automatically and didn't allow for user input which wasn't really what I was looking for. After some thinking, I eneded up with a solution that uses absolute positioning and the *:target* pseudo-selector to change the *z-index* and *opacity* of our carousel items to cycle through them. It looks something like this:
 
 <div class="carousel-wrapper" style="height: 400px;">
   <span class="hidden-target" id="target-item-1"></span>
@@ -43,7 +43,7 @@ The structure of our carousel goes something like this: We have a main *div.caro
 
 Each of our *div.carousel-item* elements have some content within them, and two links, *a.arrow-prev* and *a.arrow-next*, which we use to cycle between the carousel items.
 
-Because our individual carousel items will be *position: absolute* (so we can stack them on top of eachother), we have to set the *div.carousel-wrapper*'s height manually, and it makes sense to do this inline. We're going to try to offload as much of our CSS to our external stylesheet, but some of the items we'll have write inline in order to make our carousel reusable and scalable.
+Because our individual carousel items will be *position: absolute* (so we can stack them on top of eachother), we have to set the *div.carousel-wrapper*'s height manually, and it makes sense to do this inline. We're going to try to offload as much of our CSS to our external stylesheet, but some of the items we'll have to write inline in order to make our carousel reusable and scalable.
 
 I'm also using inline CSS to set the background image of two of our *div.carousel-item* elements to make them a little more vibrant, but we'll leave that out below so that our markup is more readable.
 
@@ -53,7 +53,7 @@ Since our carousel items get their size from their parent,
 we have to specify its height.-->
 <div class="carousel-wrapper" style="height: 400px;">
   <!--The carousel uses regular links to cycle through each item.
-  The links actually target these display: none; spans so our page doesn't 
+  The links actually target these display: none; spans so our page doesn't
   jump like it normally would when using jump links.-->
   <span id="target-item-1"></span>
   <span id="target-item-2"></span>
@@ -127,6 +127,7 @@ in the right place. */
     display: block;
     width: 50px;
     height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     background: url("/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
 
       /* Let's put our arrow to go back on the left. */
@@ -156,7 +157,7 @@ in the right place. */
       }
     }
 
-    /* Let's use using some media queries to resize the arrows 
+    /* Let's use using some media queries to resize the arrows
     on smaller devices.*/
     @media (max-width: 480px) {
       .arrow, &.light .arrow {
