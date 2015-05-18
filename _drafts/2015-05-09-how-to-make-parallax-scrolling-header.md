@@ -10,7 +10,7 @@ excerpt:    Nothing says 2014 like a beautifully designed hero image and header 
 
 Some posts over at [Medium](https://medium.com/) have this neat hero image and title where the title is overlaid on the hero and, as you scroll the page, the post's title scrolls slower than the rest of the content and it fades out as you scroll. I like that effect, and thought it would look cool with a little bit of parallax on the hero image as well. I wanted to have something like this on this blog, so I whipped the following up.
 
-Since this site is built with Jekyll, all of my post content (title, date, post body) normally sits in a container div that's used for padding purposes. In order to get this 
+Since this site is built with Jekyll, all of my post content (title, date, post body) normally sits in a container div that's used for padding purposes. In order to get the header 
 
 - Intro
 - Shoutouts
