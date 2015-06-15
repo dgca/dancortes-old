@@ -1,0 +1,25 @@
+{
+  "name": "dancortes",
+  "version": "1.0.0",
+  "description": "Nothing to see here, just a personal site. I'm building it using [Jekyll](http://jekyllrb.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dgca/dancortes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgca/dancortes/issues"
+  },
+  "homepage": "https://github.com/dgca/dancortes",
+  "dependencies": {
+    "autoprefixer-core": "^5.2.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.5.1"
+  }
+}
