@@ -217,6 +217,7 @@ div.example:hover {
 </figure>
 
 {% highlight css %}
+div.example {
   background-color: red;
   height: 100px;
   width: 100px;
