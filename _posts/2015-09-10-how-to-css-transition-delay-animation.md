@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Using multiple CSS transitions to create class-based animations"
+title:      "Using multiple class-based CSS transitions to create staged animations"
 date:       2015-09-10
 categories: web-design
 heroimage:
@@ -141,7 +141,7 @@ So, what's our CSS doing to create this effect? First, let's look at the CSS in 
 
 So here's where we turn empty *div.circle*'s into 40px by 40px purple circles. We also explicitly define a few things that make this whole effect possible.
 
-For one—and most importantly for the topic at hand—we set the default *transition* property for our *.circle*'s to *all 2s ease*. For context, *transition* is a shorthand property that defines a few things, such as what property we're setting the transition for, how long the transition should take, what (if any) delay there should be before our transition begins, and what easing function should be used to transition between the two values. Learn more about it on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/transition).
+For one—and most importantly for the topic at hand—we set the default *transition* property for our *.circle*'s to *all 2s ease-out*. For context, *transition* is a shorthand property that defines a few things, such as what property we're setting the transition for, how long the transition should take, what (if any) delay there should be before our transition begins, and what easing function should be used to transition between the two values. Learn more about it on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/transition).
 
 So, why did we define it here? Well, remember our cat up there? If we didn't define the base state, then when we toggled off the *.animate* class, our circles would immediately jump back to their initial state without that smooth transition effect we're going for. We want the default transition to apply to the *left* property, transition over *2 seconds*, and use a *ease-out* transition-timing-function. Again, *transition* is a shorthand for all of these individual properties.
 
